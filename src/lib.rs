@@ -33,8 +33,6 @@
 //! ]);
 //! ```
 
-#![crate_name = "difference"]
-#![doc(html_root_url = "http://docs.rs/difference")]
 #![deny(missing_docs)]
 #![deny(warnings)]
 
@@ -44,11 +42,12 @@ mod display;
 
 use lcs::lcs;
 use merge::merge;
+use serde::{Deserialize, Serialize};
 
 /// Defines the contents of a changeset
 /// Changesets will be delivered in order of appearance in the original string
 /// Sequences of the same kind will be grouped into one Difference
-#[derive(PartialEq, Debug)]
+#[derive(PartialEq, Debug, Deserialize, Serialize)]
 pub enum Difference {
     /// Sequences that are the same
     Same(String),

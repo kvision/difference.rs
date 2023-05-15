@@ -9,10 +9,14 @@ readme = "README.md"
 categories = ["text-processing", "development-tools::testing"]
 keywords = ["diff", "text", "compare", "changes", "assert"]
 license = "MIT"
+edition = "2021"
 
 [badges]
 travis-ci = { repository = "johannhof/difference.rs" }
 appveyor = { repository = "johannhof/difference.rs" }
+
+[lib]
+name = "text_diff"
 
 [[bin]]
 name = "difference"
@@ -24,6 +28,7 @@ bin = ["getopts"]
 
 [dependencies]
 getopts = {version = "0.2", optional = true}
+serde = { version = "1.0.152", features = ["derive"] }
 
 [dev-dependencies]
 term = "0.5"
