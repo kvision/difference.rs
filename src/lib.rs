@@ -58,6 +58,7 @@ pub enum Difference {
 }
 
 /// The information about a full changeset
+#[derive(PartialEq, Debug, Clone, Deserialize, Serialize)]
 pub struct Changeset {
     /// An ordered vector of `Difference` objects, coresponding
     /// to the differences within the text
