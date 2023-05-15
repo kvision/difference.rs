@@ -1,5 +1,5 @@
 [package]
-name = "difference"
+name = "text_diff"
 version = "2.0.0"
 authors = ["Johann Hofmann <mail@johann-hofmann.com>"]
 description = "A Rust text diffing and assertion library."
@@ -20,6 +20,7 @@ name = "text_diff"
 
 [[bin]]
 name = "difference"
+path = "src/main.rs"
 doc = false
 
 [features]
